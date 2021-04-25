@@ -263,7 +263,7 @@ if __name__=='__main__':
         img.image(image_1)
         title.write("""# 联邦学习可视化平台""")
         st.write("""*题目：联邦学习下边缘设备训练实时监控系统设计与实现*""")
-        st.write("""*Designed By:  蔡宜达DLUT*""")
+        st.write("""*Designed By:  CYD_DLUT*""")
         st.info("""**请打开侧边栏选择展示内容!**  
             您可以选择开始新一轮的联邦学习训练，或者查看之前的训练结果""")
 
