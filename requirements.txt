@@ -2,5 +2,8 @@ numpy==1.15.0
 streamlit==0.79.0
 pandas==0.23.4
 
---find-links https://download.pytorch.org/whl/torch_stable.html 
-torch==1.7.1+gpu
+--find-links https://download.pytorch.org/whl/torch_stable.html
+
+torch==1.8.1+cpu
+
+torchvision==0.9.1+cpu
