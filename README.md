@@ -8,4 +8,6 @@
 
 2.pytorch1.8.1 cpu版本及以上
 
+可以直接打开https://share.streamlit.io/ostrichpie818/visual_fl/main/server.py进行操作，但是因为streamlit的app部署依托于github，训练成果不能保存，就只能训练和复现本机push上去的结果
+
 
