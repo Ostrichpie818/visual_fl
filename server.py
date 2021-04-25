@@ -384,7 +384,7 @@ if __name__=='__main__':
 
                         elif fidForm[j]=='精确度图像':
                             st.write('''## 精确度图像''')
-                            accuLocation=len(his_dl)-1-hisDatalist[episode][1]
-                            his_aline = pd.DataFrame(hisDatalist[episode][accuLocation: len(his_dl) - 1],
+                            accuLocation=len(hisDatalist[episode])-1-hisDatalist[episode][1]
+                            his_aline = pd.DataFrame(hisDatalist[episode][accuLocation: len(hisDatalist[episode]) - 1],
                                                      columns=['Accuracy'])
                             st.line_chart(his_aline)
