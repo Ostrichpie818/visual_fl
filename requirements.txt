@@ -3,4 +3,4 @@ streamlit==0.79.0
 pandas==0.23.4
 
 --find-links https://download.pytorch.org/whl/torch_stable.html 
-torch==1.8.1+gpu
+torch==1.7.1+gpu
