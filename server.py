@@ -77,14 +77,6 @@ class Server:
         if not os.path.isdir(path):
             os.mkdir(path)
 
-    def saveAccu(self):
-        df = pd.DataFrame(columns=self.accuColums,data=self.accuList)
-        df.to_csv("./test.csv",encoding="utf-8-sig")
-
-    def printAccu(self):
-        df = pd.DataFrame(data=self.accuList)
-        st.line_chart(df)
-
     #实时更新训练loss曲线
     def showList(self,lossList,clientList):
         st.write("## 训练收敛状况")
@@ -109,8 +101,7 @@ class Server:
         for client in tqdm(clients_in_comm):
 
             self.lock.acquire()
-            self.lossList.append([])
-
+            
             if (self.alChoice==0):
                 local_parameters = myClients.clients_set[client].localUpdate(self.epoch, self.batch_size, net,
                                                                          loss_func, opti, global_parameters,
@@ -195,6 +186,7 @@ class Server:
                                                              "global_parameters": global_parameters,
                                                              "myClients": myClients, "index": j}))
                 st.report_thread.add_report_ctx(self.threads[j])
+                self.lossList.append([])
 
             for t in self.threads:
                 t.start()
