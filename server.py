@@ -271,8 +271,8 @@ if __name__=='__main__':
         st.write("""                  
 
                 """)
-        st.info("""***训练进行中......***     
-                ***您可以打开侧边栏查看训练进度***""")
+        st.info("""***训练进行中......***""")
+        st.warning("训练结束后在当前界面直接改变参数，会开始新一轮的训练")
 
         startTime = time.localtime()
         sv = Server(num_of_clients, epoch, batch_size, num_of_com,is_iid,alChoice)
